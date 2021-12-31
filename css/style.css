@@ -1,45 +1,100 @@
 *,
 *::after,
-*::before{
+*::before {
     box-sizing: border-box;
 }
-a{
-    color:inherit;
+a {
+    color: inherit;
     text-decoration: none;
 }
-body{
-font-family: 'Roboto', sans-serif;
-font-weight: 400;
-font: size 16px; 
-line-height:  19px; 
-/*font-family: 'Roboto Slab', serif;*/
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font: size 16px;
+    line-height: 19px;
+  
 }
 .container {
-    max-width: 800px;
+    max-width: 1220px;
     padding: 0 10px;
     margin: 0 auto;
-    
 }
-.header__top{
-    display:flex;
+.header__top {
+    display: flex;
     justify-content: space-between;
     padding-top: 27px;
-    
 }
-.logo{
+.logo {
     margin-left: 16px;
 }
-.phone{
+.phone {
     margin-right: 46px;
     margin-top: 11px;
 }
-.menu__list{
+.menu{
+    margin-top: 16px;
+}
+.menu__list {
     display: flex;
+}
+/*ЗДЕСЬ СТАВЛЮ МАРЖИН ПОТМУ ЧТО ЕСЛИ В СЕЛЕКТОРЕ ЛИНК ТО РАСШ.ОБЛ ВЛИЯН ПЛЮС ДЛЯ ТОГО ЧТОБЫ НЕ БЫЛО ЛИШНЕГО ОТСТУПА С КРАЮ*/
+.menu__item + .menu__item {
+    margin-left: 30px;
+}
+.menu__link {
+    text-transform: uppercase;/*буквы будут в верхнем регистре*/
+    font-weight: 500;
+    color: #001e64;
+    font-size: 18px;
+    line-height: 21px;
+}
+.menu__link:hover {
+    /*эффет при наведении подчеркивание*/
+    border-bottom: 1px solid #001e64;
 
 }
-.menu__item{
+.header__content{
+    background-image:url(../images/header-bg.png.png) ;/*ПИШЕШЬ АДРЕС ОТНОСИТЕЛЬНО ПАПКИ ССС
+     ТЕ ВЫХОДИШЬНА УРОВЕРЬ ВЫШЕ ИЗАХОДИШЬ В ИМАДЖЕС*/
+     background-size: cover;/*картинка по контенту и растяг.на весь экран*/
+     background-position: center;/*картинка по ценру*/
+     background-repeat: no-repeat;
+}
+.title{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 95px;
+    color: #001e64;
+    max-width: 589px;
+    padding-top: 200px;
+    padding-left :112px;
+    margin-bottom: 130px;/*негл.прав.от в.до ниж. точ.дел.марж*/
+}
+.header-slider{
+   max-width: 522px; /*паддинги резервир.место под др.эл.ЧТОБ ПОЗИЦ.ЦИФР СТРЕЛКИ*/
+   padding-top: 57px;
+   padding-left: 112px;
+   padding-bottom: 135px;
+}
+.header-slider__text{
+    margin-bottom: 25px;/*ПАРАМЕТРЫ ТЕКСТА В СЛАЙДЕРЕ*/
+    font-size: 18px;
+    line-height: 22px;
+    color:#fff;
+}
+.slick-prev,.slick-next {
+    background-color:transparent;
+    border:none;
+    cursor: pointer;   
+    padding: 0;
+    position: absolute;
 
 }
-.menu__link{
+
+
     
-}
+    
+    
+
+    
