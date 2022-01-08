@@ -156,6 +156,21 @@ body {
     font-size: 18px;
     line-height: 21px;
     color:#fff;
+
+}
+.product{
+    padding-top: 100px;
+    
+}
+.product__inner{
+  display:flex;
+  justify-content: space-between;  
+}
+.product__name{
+    
+}
+.prouct__content{
+    width: 600px;
 }
 /*
 .header__content-link--active{
