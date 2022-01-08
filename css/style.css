@@ -12,7 +12,6 @@ body {
     font-weight: 400;
     font: size 16px;
     line-height: 19px;
-  
 }
 .container {
     max-width: 1220px;
@@ -22,7 +21,7 @@ body {
 .header__top {
     display: flex;
     justify-content: space-between;
-    padding-top: 27px;
+    padding-top: 20px;
 }
 .logo {
     margin-left: 16px;
@@ -31,7 +30,7 @@ body {
     margin-right: 46px;
     margin-top: 11px;
 }
-.menu{
+.menu {
     margin-top: 16px;
 }
 .menu__list {
@@ -42,7 +41,7 @@ body {
     margin-left: 30px;
 }
 .menu__link {
-    text-transform: uppercase;/*буквы будут в верхнем регистре*/
+    text-transform: uppercase; /*буквы будут в верхнем регистре*/
     font-weight: 500;
     color: #001e64;
     font-size: 18px;
@@ -51,50 +50,115 @@ body {
 .menu__link:hover {
     /*эффет при наведении подчеркивание*/
     border-bottom: 1px solid #001e64;
-
 }
-.header__content{
-    background-image:url(../images/header-bg.png.png) ;/*ПИШЕШЬ АДРЕС ОТНОСИТЕЛЬНО ПАПКИ ССС
+.header__content {
+    background-image: url(../images/header-bg.png.png); /*ПИШЕШЬ АДРЕС ОТНОСИТЕЛЬНО ПАПКИ ССС
      ТЕ ВЫХОДИШЬНА УРОВЕРЬ ВЫШЕ ИЗАХОДИШЬ В ИМАДЖЕС*/
-     background-size: cover;/*картинка по контенту и растяг.на весь экран*/
-     background-position: center;/*картинка по ценру*/
-     background-repeat: no-repeat;
+    background-size: cover; /*картинка по контенту и растяг.на весь экран*/
+    background-position: top; /*картинка по ценру*/
+    background-repeat: no-repeat;
+    padding-bottom: 20px;/*здесь а не в контент бокс чтобы картин хорош растяг*/
+    margin-top: -100px;
+    min-height:calc(100vh - 50px) ;/*отяли зазор между хедер топ и
+     картинкой на разных экранах всю высоту*/
 }
-.title{
-    font-family: 'Roboto Slab', serif;
+.title {
+    font-family: "Roboto Slab", serif;
     font-weight: 700;
     font-size: 72px;
     line-height: 95px;
     color: #001e64;
     max-width: 589px;
-    padding-top: 200px;
-    padding-left :112px;
-    margin-bottom: 130px;/*негл.прав.от в.до ниж. точ.дел.марж*/
+    padding-top: 170px;
+    padding-left: 112px;
+    margin-bottom: 60px; /*негл.прав.от в.до ниж. точ.дел.марж*/
 }
-.header-slider{
-   max-width: 522px; /*паддинги резервир.место под др.эл.ЧТОБ ПОЗИЦ.ЦИФР СТРЕЛКИ*/
-   padding-top: 57px;
-   padding-left: 112px;
-   padding-bottom: 135px;
+.header-slider {
+    max-width: 522px; /*паддинги резервир.место под др.эл.ЧТОБ ПОЗИЦ.ЦИФР СТРЕЛКИ*/
+    padding-top: 57px;
+    padding-left: 112px;
+    padding-bottom: 135px;
 }
-.header-slider__text{
-    margin-bottom: 25px;/*ПАРАМЕТРЫ ТЕКСТА В СЛАЙДЕРЕ*/
+.header-slider__text {
+    margin-bottom: 25px; /*ПАРАМЕТРЫ ТЕКСТА В СЛАЙДЕРЕ*/
     font-size: 18px;
     line-height: 22px;
+    color: #fff;
+}
+.slick-prev,
+.slick-next {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute; /*релятив уст.по умолч.для слайдера*/
+    left: 40px;
+}
+
+.slick-prev {
+    top: 0;
+}
+
+.slick-next {
+    bottom: 0;
+}
+
+.slick-dots {
+    /*nombers conteiner*/
+    list-style: none;
+    position: absolute;
+    left: 35px;
+    top: 58px;
+    bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slick-dots button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    line-height: 28px;
+    opacity: 0.5;
+    cursor: pointer;/*курсор ладошка при навед*/
+}
+
+.slick-active button {
+    opacity: 1;
+}
+/*a zero is befor the button*/
+.slick-dots button::before {
+    content: "0";
+}
+
+.header__content-btn {
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 14px 88px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /*полупр.кнопк*/
+    margin-left: 112px;
+    display: inline-block;/*тк ссылка нужно чтобы раб.все свва ссс*/
+    transform: translateY(-100px ); /*подн.вверх игрек это по оси вверх мож.было ичерез абсолют толь ко обернуть в див и релятив*/
+    position: absolute;
+}
+
+.header__content-box{
+    display: flex;
+    margin-left: 100%;/*чтобы до конца в лево*/
+    margin-right: 30px;
+    font-size: 18px;
+    line-height: 21px;
     color:#fff;
 }
-.slick-prev,.slick-next {
-    background-color:transparent;
-    border:none;
-    cursor: pointer;   
-    padding: 0;
-    position: absolute;
-
+/*
+.header__content-link--active{
+    font-weight: 700;
 }
-
-
-    
-    
-    
-
-    
+*/
