@@ -57,9 +57,9 @@ body {
     background-size: cover; /*картинка по контенту и растяг.на весь экран*/
     background-position: top; /*картинка по ценру*/
     background-repeat: no-repeat;
-    padding-bottom: 20px;/*здесь а не в контент бокс чтобы картин хорош растяг*/
+    padding-bottom: 20px; /*здесь а не в контент бокс чтобы картин хорош растяг*/
     margin-top: -100px;
-    min-height:calc(100vh - 50px) ;/*отяли зазор между хедер топ и
+    min-height: calc(100vh - 50px); /*отяли зазор между хедер топ и
      картинкой на разных экранах всю высоту*/
 }
 .title {
@@ -123,7 +123,7 @@ body {
     font-size: 24px;
     line-height: 28px;
     opacity: 0.5;
-    cursor: pointer;/*курсор ладошка при навед*/
+    cursor: pointer; /*курсор ладошка при навед*/
 }
 
 .slick-active button {
@@ -144,33 +144,39 @@ body {
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.5); /*полупр.кнопк*/
     margin-left: 112px;
-    display: inline-block;/*тк ссылка нужно чтобы раб.все свва ссс*/
-    transform: translateY(-100px ); /*подн.вверх игрек это по оси вверх мож.было ичерез абсолют толь ко обернуть в див и релятив*/
+    display: inline-block; /*тк ссылка нужно чтобы раб.все свва ссс*/
+    transform: translateY(
+        -100px
+    ); /*подн.вверх игрек это по оси вверх мож.было ичерез абсолют толь ко обернуть в див и релятив*/
     position: absolute;
 }
 
-.header__content-box{
+.header__content-box {
     display: flex;
-    margin-left: 100%;/*чтобы до конца в лево*/
+    margin-left: 100%; /*чтобы до конца в лево*/
     margin-right: 30px;
     font-size: 18px;
     line-height: 21px;
-    color:#fff;
+    color: #fff;
+}
+.header__content-link--active {
+    font-weight: 700;
+}
 
-}
-.product{
+.product {
     padding-top: 100px;
+}
+.product__inner {
+    display: flex;
+    justify-content: space-between;
     
 }
-.product__inner{
-  display:flex;
-  justify-content: space-between;  
-}
-.product__name{
+.product__name {
     
 }
-.prouct__content{
+.prouct__content {
     width: 600px;
+    margin: 0;
 }
 /*
 .header__content-link--active{
