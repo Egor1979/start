@@ -169,17 +169,17 @@ body {
 .product__inner {
     display: flex;
     justify-content: space-between;
-    
 }
 .product__name {
-    
+    width: 510px;
+    text-align: center;
+}
+.product__name-item + .product__name {
+    margin-top: 30px;
 }
 .prouct__content {
     width: 600px;
-    margin: 0;
+    
 }
-/*
-.header__content-link--active{
-    font-weight: 700;
-}
-*/
+
+
