@@ -8,10 +8,11 @@ a {
     text-decoration: none;
 }
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Slab", sans-serif;
     font-weight: 400;
     font: size 16px;
     line-height: 19px;
+    color: #232222;
 }
 .container {
     max-width: 1220px;
@@ -173,13 +174,110 @@ body {
 .product__name {
     width: 510px;
     text-align: center;
+    padding-top: 41px;
 }
-.product__name-item + .product__name {
+
+.product__name-item {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    cursor: pointer;
+}
+/*НИЖЕ ПИШУ ТАК ПОТМУ ЧТО ДВА КЛАССА СЛИТНО ГОВОРЯТ
+ ЧТО ВТОРОЙ КЛАСС ПРИНАДЛЕЖИТ ПЕРВОМУЮ.ТАК НАПИСАЛ ПОТМУ ЧТО КАРРЕНТ ЕСТЬ И У ДРУГИХ
+ КЛАССОВ РО ТАМ ПРСТО  КАРРЕНТ.ЭТО АКТИВНЫЙ ЭЛЕМЕНТ при нажатии выдел.цвет ИЩЕШЬ В КОНСОЛИ*/
+.product__name-item.slick-current {
+    font-weight: 700;
+    font-size: 36px;
+
+    color: #001e64;
+}
+
+.product__name-item + .product__name-item {
+    /*только маржины через плюс зад*/
     margin-top: 30px;
 }
-.prouct__content {
+
+.product-prev {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+.product-prev,
+.product-next {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+.product__content {
     width: 600px;
-    
 }
 
+.product__content-box {
+    display: flex;
+    justify-content: space-between;
+}
+.product__content-img {
+    object-fit: cover; /*the same that backgraund-size*/
+}
 
+.product__content-list {
+    width: 291px; /*ШИРИН.КОНТ.ЧТОБЫ НЕ ВЫЛ.КОНТЕНТ*/
+    list-style: none; /*убр.маркер*/
+}
+
+.product__content-item {
+    margin-bottom: 30px;
+}
+
+.product__content-item span {
+    display: block; /*чтобы заимал все пространство*/
+    margin-bottom: 30px;
+    color: #001e64;
+}
+.product__content-title {
+    font-family: "Roboto Slab", serif;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #001e64;
+    margin-bottom: 20px;
+}
+.product__content-btn {
+    display: inline-block;
+    color: #001e64;
+    font-family: "Roboto Slab", serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    padding: 12px 85px;
+    background-color: transparent; /*чтобы прозрачно ек у кнопки по умолч серо*/
+    text-transform: uppercase; /*the words are big*/
+    border: 1px solid #001e64;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.seafood{
+    background-image: url(../images/seafood-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 290px 0 95px;
+    /*без паддинка в блоке не видно картинку итекст*/
+}
+
+.seafood__items {
+    display: flex;
+    justify-content: space-around;
+}
+.seafood__item{
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
