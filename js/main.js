@@ -1,9 +1,11 @@
 $(function () {
 
   $('.header-slider').slick({
+    
     dots: true, prevArrow: '<button type="button" class="slick-prev"><img src="images/prev.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="images/next.svg" alt=""></button>',
     fade: true,
+
     //дотс тру это взято из натсроек слайдера на слик внизу саита это вызвало цифры
     //стрелки в слайдере настройка,я пропис.в своб.месте хтмл адрес вырезал ископир.сюда
   });
