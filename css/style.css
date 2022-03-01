@@ -150,11 +150,18 @@ body {
         -100px
     ); /*подн.вверх игрек это по оси вверх мож.было ичерез абсолют толь ко обернуть в див и релятив*/
     position: absolute;
+    transition: all 0.3s; /*ПИШЕМ ЗДЕСЬ ГДЕ НЕТ ЭЛЕМЕНТА ХОВЕР*/
+}
+/*МЕНЯЕТСЯ ЦВЕТ ПРИ НАВЕД*/
+.header__content-btn:hover {
+    color: #001e64;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .header__content-box {
     display: flex;
-    margin-left: 100%; /*чтобы до конца в лево*/
+    /* margin-left: 100%; чтобы до конца в лево*/
+    justify-content: flex-end;
     margin-right: 30px;
     font-size: 18px;
     line-height: 21px;
@@ -259,15 +266,20 @@ body {
     border: 1px solid #001e64;
     border-radius: 20px;
     cursor: pointer;
+    transition: all 0.3s;
+}
+.product__content-btn:hover {
+    color: #fff;
+    background-color: #001e64;
 }
 
-.seafood-box{
+.seafood-box {
     background-image: url(../images/seafood-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-   padding: 290px 0 95px ;
- 
+    padding: 290px 0 95px;
+
     /*без паддинка в блоке не видно картинку итекст*/
 }
 
@@ -275,13 +287,13 @@ body {
     display: flex;
     justify-content: space-around;
 }
-.seafood-box__item{
+.seafood-box__item {
     width: 180px;
-    min-height: 165px;/*можно больше если надо*/
-    display:flex;
+    min-height: 165px; /*можно больше если надо*/
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-image:url(../images/seafood-decor.svg);
+    background-image: url(../images/seafood-decor.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -289,7 +301,7 @@ body {
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
-    color: #fff; 
+    color: #fff;
     text-align: center;
 }
 .seafood {
@@ -314,7 +326,7 @@ body {
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    color:#001E64;
+    color: #001e64;
 }
 .seafood__item-text {
     max-width: 420px;
@@ -323,16 +335,16 @@ body {
 .seafood__item-img {
 }
 /*ЭТОТ БЛОК В МАКЕТЕ В НЕМ ТЕКСТ СМЕЩЕН К КРАЮ А НЕ РАСТЯНУТ НА ВСЮ ШИРИНУ*/
-.seafood__item--text-right .seafood__item-content{
-margin-right: 180px;
+.seafood__item--text-right .seafood__item-content {
+    margin-right: 180px;
 }
 
-.seafood__item--text-right .seafood__item-title{
+.seafood__item--text-right .seafood__item-title {
     max-width: 420px;
 }
 .seafood__blockquote {
     max-width: 800px;
-    margin: 0 auto;/*блок по центру*/
+    margin: 0 auto; /*блок по центру*/
     text-align: center;
 }
 
@@ -341,3 +353,264 @@ margin-right: 180px;
     margin: 0 auto;
     font-size: 18px;
 }
+.contacts {
+    background-image: url(../images/contacts-bj.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.contact__box {
+    margin-left: auto; /*БЛОК ОТЬХАЛ ВЛВО СТЕКСТМ.ЦВЕТ БЕЛЫЙ ЧТОБ ПРИ СОПРИКОСАНИИ СФОТО БЫЛО НОРМ*/
+    width: 390px;
+    background-color: #fff;
+    padding: 33px 0px 33px 20px; /*ВНУТРИ КОНТЕНТ ОТЬЕХАЛ ОТ ФОТР И СВЕРХУ НИЗУ*/
+}
+.contacts__box-text {
+    width: 195px;
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #001e64;
+    margin-bottom: 30px;
+}
+
+.contact__box-list {
+    font-size: 18px; /*ЗАДАЛ РОДИТЕЛЮ ОН ДЕЙСТВУЕТ НА ДЕТЕЙ*/
+    line-height: 21px;
+}
+.conact__box-item {
+    margin-bottom: 30px;
+    /*ОТСУПЫ МЕЖДУ ЛИ .МАРЖИНЫ СХЛОПЫВАЮТСЯ ЕСЛИ НАПРОТИВ ДРУГ ДРУГУ И БЕРЕТСЯ БОЛЬШИЙ РАЗМЕР*/
+    list-style-type: none;
+}
+.conact__box-item span {
+    display: block;
+}
+
+.footer {
+    padding: 25px 0 110px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 45px 0 23px;
+}
+.footer__inner .menu {
+    padding-bottom: 30px;
+}
+.footer-social__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding-bottom: 19px;
+}
+.footer-social__item + .footer-social__item {
+    margin-left: 10px;
+
+    /*ЧТОБЫ НЕ БЫЛО ЛИШНЕГО ОТСТУПА*/
+} /*ЧТОБЫ ПЛАВНО МЕН.ЦВЕТ*/
+.footer-social__link {
+    transition: all 0.3s;
+}
+.footer-social__link :hover path {
+    /*ЧТОБЫ ПРИ НАВЕД.МЕН.ТЕКС.ЦВЕТ*/
+    fill: #001e64;
+}
+/* НАПИС ВНИЗКУ КОДА ЭТФ КНОПКА ДЛЯ АДАПТ МЕНЮУБИРАЮ АВТОМ.ОТСТУПЫ И БОРДЕР*/
+.menu__btn {
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    padding: 13px 0; /* ЗДЕЛАЛ ОТСТУП ЧТОБЫ РАЗМЕСТИТЬ ПОЛОСКИ свыше тысячи НЕ ВИДНО*/
+    cursor: pointer;
+    position: relative;
+    display: none; /*КНОПКА НЕ ВИДНА ПОСЛЕ ТЫСЯЧИ*/
+    z-index: 10;
+}
+.menu__btn::after,
+.menu__btn::before {
+    left: 0;
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 4px;
+    background-color: #001e64;
+}
+.menu__btn::after {
+    bottom: 0;
+}
+.menu__btn::before {
+    top: 0;
+}
+
+.menu__btn span {
+    display: block;
+    height: 4px;
+    background-color: #001e64;
+}
+/*ПИШУ ВЫШЕ ТЫСЯЧИ МЕДИА ТАК НАДО ПО ПОРЯДКУ ЭТО УЖЕ СЕКШИН*/
+@media (max-width: 1160px) {
+    .product__name {
+        width: 350px;
+    }
+}
+/*АДАПТИВ ДИСПЛЕЙ НОНЕ УБРАЛ МЕНЮ до тысячи его нет И Я СДЕЛАЛ В ХТМЛ КНОПКУ ПОД МЕНЮ СДЕЛАЛ БУРГЕР ДЛЯ МЕНЮ ДО 1000*/
+@media (max-width: 1000px) {
+    /**/
+    .menu__list {
+        position: absolute;
+        display: block;
+        left: 20%;
+        right: 20%;
+        background-color: white;
+        top: -350px; /*ЧТОБЫ ЮЛОК МЕНЮ ИСЧЕЗ ПРИ РАЗМ.ЬЕНЬШЕ ТЫС.*/
+        transition: all 0.5s; /*ПЛАВНОСТЬ ОТКРЫТИЯ*/
+        z-index: 5;
+    }
+    .menu__link:hover {
+        border: none;
+    }
+    .menu__list.menu__list--active {
+        top: 75px; /*ЧТОБ КНОПКА ПРИ НАЖЗАТИИ ВЫСК*/
+    }
+    .menu__btn {
+        display: block; /*КНОПКА БУДЕТ ВИДНА ДО ТЫСЯЧИ*/
+    }
+    .menu {
+        /*ВЫРОВНЯЛ МЕНЮ ОТНОСИТЕЛЬНО ТЕЛЕФОНА*/
+        margin-left: auto;
+        margin-top: 12px;
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+    .menu__item + .menu__item {
+        margin-left: 0px;
+    }
+    .menu__link {
+        display: block;
+        padding: 20px 0px;
+        text-align: center; /*ОЦЕНТРОВАЛ ССЫЛКИ ДИСПЛЕЙ БЛОК СДЕЛАЛ ПОТОМУ ЧТО СТРОЧ .ЭЛЕМ ПОТОМУ ЧТО ССЫЛКИ поинтер чтоб убрать подч.*/
+    }
+    /*УБИРАЕМ ПОДЧЕРКИВ. ДО 1000 ПРИ НАВЕД.*/
+    .menu__link:hover {
+        border: none;
+    }
+    .product__name {
+        width: 250px;
+    }
+}
+/*перестроил блоки мало места*/
+@media (max-width: 890px) {
+    .product__inner {
+        display: block;
+    }
+    /* КРАБ ПО ЦЕНТРУ БЛОКА*/
+    .product__content {
+        margin: 0 auto;
+    }
+    .product__name {
+        
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: 80px;
+    }
+    .product__name-item + .product__name-item {
+        margin-top: 0;
+    }
+    .product__name-item .slick-current {
+        line-height: 44px;
+    }
+    .product__name .slick-dots {
+        left: 0;
+        right: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+    /**/
+    .product__name .slick-dots button {
+        width: 10px;
+        height: 10px;
+        font-size: 0;
+        padding: 0;
+        border-radius: 50%;
+        margin: 0 5px;
+        background-color: #c4c4c4;
+    }
+    .product__name .slick-active button {
+        background-color: #001e64;
+    }
+}
+@media (max-width: 745px) {
+    /* ИЗМЕНИЛ ШРИФТ УБАЛПАДИНГ ЛЕФТ И ОТЦЕНТ .МАКС ШИР 100ПР.РАССТ МЕЖ СТРОК УМЕНЬШ.*/
+    .title {
+        font-size: 50px;
+        line-height: 65px;
+        text-align: center;
+        max-width: 100%;
+        padding-top: 170px;
+        padding-left: 0px;
+        margin-bottom: 60px;
+    }
+}
+@media (max-width: 650) {
+    .product__content {
+        width: 100%;
+    }
+}
+@media (max-width: 600) {
+    .product__content-box {
+        display: block;
+    }
+    .product__content-list {
+        width: 100%;
+    }
+}
+/*АНАЛОГИЧНО УМЕНЬШАЮ РАЗМЕРЫ ПОД ЭТОТ ЭКРАН*/
+@media (max-width: 470px) {
+    .header-slider {
+        padding-left: 50px;
+    }
+    .slick-dots {
+        left: 5px;
+    }
+    .slick-prev,
+    .slick-next {
+        left: 9px;
+    }
+
+    .header__content-btn {
+        margin-left: 50px;
+    }
+    .title {
+        font-size: 34px;
+        line-height: 44px;
+    }
+    .product__content-btn{
+        padding: 12px 15px;
+    }
+    .product{
+padding-top: 50px;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        padding-top: 120px;
+    }
+    .phone {
+        margin-right: 0px;
+    }
+    .logo {
+        margin-left: 0px;
+    }
+    .menu__list {
+        left: 10%;
+        right: 10%;
+    }
+    .header-slider {
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+    .header__content-btn {
+        margin-lef
